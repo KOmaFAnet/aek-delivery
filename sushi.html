@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/genfavicon-32.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header-left">
+                <a href="index.html">
+                <img src="logo.avif" alt="logo image">
+                </a>
+                <h1 class="main-name">AEK Delivery</h1>
+            </div>
+            <nav id="navigation-desktop">
+                    <div class="category-menu-open">
+                        <a href="#" id="category-button">
+                            <img src="menu.svg" alt="Open menu">Select a category
+                        </a>
+                        <ul class="category">
+                            <li>
+                                <a href="fast-food.html">
+                                    <img src="burger-icon.png" alt="Burger image">Fast Food
+                                </a>
+                            </li>
+                            <li>
+                                <a href="confectionery.html">
+                                    <img src="sweets-icon.png" alt="Sweets image">Confectionery
+                                </a>
+                            </li>
+                            <li>
+                                <a href="catering-and-banquets.html">
+                                    <img src="catering-icon.png" alt="Catering image">Catering & banquets
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="sushi.html">
+                                    <img src="sushi-icon.png" alt="Sushi image">Sushi
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="leave-a-request-desktop"><a href="leave-a-request.html">Leave a request</a></div> 
+                    <div class="about-us-desktop"><a href="about-us.html">About Us</a></div>
+            </nav>
+            <a href="javascript:void(0);" id="mobile-menu" onclick="myFunction()">
+                <img src="menu.svg" alt="Menu Icon">
+            </a>
+        </header>
+        <main class="main-category">
+            <div class="hero-text">
+                <div class="category-text">
+                    <h1>Delivery for Sushi Restaurants</h1>
+                    <p>Professional delivery tailored for sushi, keeping every roll fresh, visually perfect, and ready to enjoy upon arrival</p>
+                </div>
+                <a href="leave-a-request.html" class="leave-a-request">Connect your restaurant</a>
+            </div>
+            <div class="features">
+                <div class="fast-delivery box">
+                    <h2> ⚡ Fast Delivery</h2>
+                    <p>Orders delivered in 30 minutes</p>
+                </div>
+                <div class="couriers box">
+                    <h2>🚚 Reliable Couriers</h2>
+                    <p>Proffesional delivery staff</p>
+                </div>
+                <div class="customers box">
+                    <h2>📈 More Customers</h2>
+                    <p>Increase your revenue</p>
+                </div>
+                <div class="setup box">
+                    <h2>🔧 Easy Setup</h2>
+                    <p>Quick integration process</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="how-it-works">
+                    <h3> How it works:</h3>
+                    <p>1. Submit request</p> 
+                    <p>2. We contact you</p>
+                    <p>3. We connect your restaurant</p> 
+                    <p>4. You start receiving orders</p>
+                </div>
+                <div class="advantages">
+                    <div class="adventages1">Advantages:</div>
+                    <div class="adventages2 advtext">1. Care from kitchen to door</div>
+                    <div class="adventages3 advtext">2. Freshness guaranteed</div>
+                    <div class="adventages4 advtext">3. Careful handling</div> 
+                    <div class="adventages5 advtext">4. Temperature control</div>
+                </div>
+            </div>    
+        </main>
+    </div>
+        <script>
+
+        const button = document.getElementById("category-button");
+        const menu = document.querySelector(".category");
+
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            menu.classList.toggle("open");
+        });
+        
+        function myFunction() {
+            var x = document.getElementById("navigation-desktop");
+                if (x.style.width === "210px") {
+                x.style.width = "0";
+                } else {
+                x.style.width = "210px";
+                }
+        }
+        
+    </script>
+</body>
+</html>
