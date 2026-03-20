@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request AEK</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/genfavicon-32.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header-left">
+                <a href="index.html">
+                <img src="logo.avif" alt="logo image">
+                </a>
+                <h1 class="main-name">AEK Delivery</h1>
+            </div>
+
+            <nav id="navigation-desktop">
+                    <div class="category-menu-open">
+                        <a href="#" id="category-button">
+                            <img src="menu.svg" alt="Open menu">Select a category
+                        </a>
+                        <ul class="category">
+                            <li><a href="fast-food.html">
+                                <img src="burger-icon.png" alt="Burger image">Fast Food
+                                </a>
+                            </li>
+                            <li><a href="confectionery.html">
+                                <img src="sweets-icon.png" alt="Sweets image">Confectionery
+                                </a>
+                            </li>
+                            <li><a href="catering-and-banquets.html">
+                                <img src="catering-icon.png" alt="Catering image">Catering & banquets
+                                </a>
+                            </li> 
+                            <li><a href="sushi.html">
+                                <img src="sushi-icon.png" alt="Sushi image">Sushi
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="leave-a-request-desktop"><a href="leave-a-request.html">Leave a request</a></div> 
+                    <div class="about-us-desktop"><a href="about-us.html">About Us</a></div>
+
+            </nav>
+            <a href="javascript:void(0);" id="mobile-menu" onclick="myFunction()">
+                <img src="menu.svg" alt="Menu Icon">
+            </a>
+        </header>
+        <main class="main-request">
+            <div class="request-text">
+                <h1>Partner with AEK Delivery</h1>
+                <p>Please fill out the form below, and our team will get 
+                back to you within 24 hours to discuss how we can support your business.</p>
+            </div>
+            <form autocomplete="on">
+                <div class="fname">
+                    <label for="fname">First Name:</label>
+                    <input type="text" name="fname" id="fname" maxlength="25" required autofocus><br>
+                </div>
+                <div class="sname">   
+                    <label for="sname">Last Name:</label>
+                    <input type="text" name="sname" id="sname" maxlength="25" required><br>
+                </div>
+                <div class="jobtitle">     
+                    <label for="jobtitle">Job Title:</label>
+                    <input type="text" name="jobtitle" id="jobtitle" maxlength="100" required><br>
+                </div>
+                <div class="phonenum">     
+                    <label for="phonenum">Phone num.:</label>
+                    <input type="tel" name="phonenum" id="phonenum" pattern="[0-9]{11}"><br>
+                </div>
+                <div class="email">     
+                    <label for="email">E-Mail:</label>
+                    <input type="email" name="email" id="email" required><br>
+                </div>
+                <div class="estname">    
+                    <label for="estname">Name of the <br>establishment:</label>
+                    <input type="text" name="estname" id="estname" required><br>
+                </div>
+                <div class="estadress">    
+                    <label for="estadress">Establishment <br>address:</label>
+                    <input type="text" name="estadress" id="estadress" required><br>    
+                </div>
+                <div class="link">
+                    <label for="link">Link:</label>
+                    <input type="url" name="link" id="link" required><br> 
+                </div>
+                <div class="i-agree">
+                    <input type="checkbox" name="iagree" id="iagree" required>
+                    <label for="iagree">By submitting this form, I confirm that I <br>
+                        have read and agree to AEK Delivery's <br>
+                        <a href="#" class="terms">Terms & Conditions</a> and <a href="#" class="privacy">Privacy Policy.</a>
+                    </label>     
+                </div>
+                <div class="submit-button">
+                    <input type="submit" value="Send">
+                </div>
+            </form>       
+        </main>
+    </div>    
+    <script>
+
+        const button = document.getElementById("category-button");
+        const menu = document.querySelector(".category");
+
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            menu.classList.toggle("open");
+        });
+        
+        function myFunction() {
+            var x = document.getElementById("navigation-desktop");
+                if (x.style.width === "210px") {
+                x.style.width = "0";
+                } else {
+                x.style.width = "210px";
+                }
+        }
+        
+    </script>
+</body>
+</html>
